@@ -1,2 +1,2 @@
 # portfolio
-My personal portfolio website built using HTML and CSS.
+My personal portfolio website built using HTML, CSS and JAVASCRIPT.
