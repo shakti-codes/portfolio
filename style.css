@@ -20,6 +20,11 @@ nav {
     color: white;
 }
 
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+}
+
 nav ul {
     display: flex;
     list-style: none;
@@ -32,16 +37,11 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
     color: white;
-    transition: color 0.3s ease;
+    transition: 0.3s;
 }
 
 nav ul li a:hover {
     color: #00adb5;
-}
-
-.logo {
-    font-weight: bold;
-    font-size: 20px;
 }
 
 /* Hero Section */
@@ -60,7 +60,7 @@ nav ul li a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 15px;   /* THIS FIXES THE OVERLAP */
+    gap: 15px;
 }
 
 .profile-img {
@@ -68,47 +68,39 @@ nav ul li a:hover {
     height: 160px;
     border-radius: 50%;
     object-fit: cover;
-    margin-bottom: 20px;
     border: 4px solid #00adb5;
     transition: transform 0.3s ease;
 }
 
 .profile-img:hover {
-    transform: scale(1.08);
-}
-
-.hero span {
-    color: #00adb5;
-}
-
-.project-buttons {
-    margin-top: 15px;
-}
-
-.btn {
-    display: inline-block;
-    padding: 8px 15px;
-    margin: 8px 5px 0 0;
-    background: #007bff;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: 0.3s ease;
-}
-
-.btn:hover {
-    background: #0056b3;
     transform: scale(1.05);
 }
 
-/* Sections */
+.hero h1 span {
+    color: #00adb5;
+}
+
+.btn {
+    text-decoration: none;
+    background: #00adb5;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #008c94;
+}
+
+/* Section */
 .section {
     padding: 60px 10%;
     text-align: center;
 }
 
 .section h2 {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     font-size: 28px;
 }
 
@@ -122,44 +114,48 @@ nav ul li a:hover {
 
 .card {
     background: white;
-    padding: 20px;
-    width: 150px;
+    padding: 20px 30px;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
 }
 
 .card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
 
 /* Projects */
+#projects {
+    background: #f4f4f4;
+}
+
+.projects-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
 .project-card {
     background: white;
-    padding: 30px;
-    width: 300px;
-    margin: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 320px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    transition: 0.3s;
 }
 
 .project-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-    }
+.project-card h3 {
+    margin-bottom: 10px;
+}
 
-    .skills-container {
-        flex-direction: column;
-        align-items: center;
-    }
+.project-card p {
+    font-size: 14px;
+    color: #555;
 }
 
 .project-buttons {
@@ -178,5 +174,36 @@ nav ul li a:hover {
 }
 
 .project-buttons a:hover {
-    background: #007b83;
+    background: #008c94;
+}
+
+/* Contact */
+#contact {
+    background: #111;
+    color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .skills-container,
+    .projects-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
 }
